@@ -7,4 +7,4 @@ Route::get('/', function () {
     return redirect()->route('tareas.index');
 });
 
-Route::resources('tareas', TareaController::class);
+Route::resource('tareas', TareaController::class);

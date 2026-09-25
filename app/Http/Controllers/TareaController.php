@@ -14,8 +14,8 @@ class TareaController extends Controller
 
     public function index()
     {
-        $tareas = Tarea:latest()->get();
-        return view('tareas.index',compact('tareas'));
+        $tareas = Tarea::latest()->get();
+        return view('tareas.index', compact('tareas'));
     }
 
     /**
@@ -42,7 +42,7 @@ class TareaController extends Controller
         Tarea::create($datosValidados);
         return redirect()
             -> route('tareas.index')
-            ->witch('mensaje','Tarea creada correctamente.');
+            ->with('mensaje', 'Tarea creada correctamente.');
     }
 
     /**
@@ -51,7 +51,7 @@ class TareaController extends Controller
     //mostrar otro formulario
     public function show(Tarea $tarea)
     {
-        return view('tareas.show',compact('tarea'));
+        return view('tareas.show', compact('tarea'));
     }
 
     /**
@@ -60,7 +60,7 @@ class TareaController extends Controller
     //
     public function edit(Tarea $tarea)
     {
-        return view('tareas.edit',compact('tarea'));
+        return view('tareas.edit', compact('tarea'));
     }
 
     /**
@@ -74,12 +74,12 @@ class TareaController extends Controller
             'completada' => 'nullable|boolean',
 
         ]);
-        $datosValidados['completada']=$request->has('completada');
+        $datosValidados['completada'] = $request->has('completada');
         $tarea->update($datosValidados);
 
         return redirect()
             ->route('tareas.index')
-            ->with('mensaje','Tarea actualizada correctamente.');
+            ->with('mensaje', 'Tarea actualizada correctamente.');
     }
 
     /**
@@ -92,6 +92,6 @@ class TareaController extends Controller
 
         return redirect()
             ->route('tareas.index')
-            ->with('mensaje','Tarea eleiminada correctamente.');
+            ->with('mensaje', 'Tarea eleiminada correctamente.');
     }
 }

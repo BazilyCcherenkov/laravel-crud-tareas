@@ -14,5 +14,4 @@ class Tarea extends Model
         'descripcion',
         'completada',
     ];
-    //
 }
