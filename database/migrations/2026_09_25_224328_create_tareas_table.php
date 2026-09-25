@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('tareas', function (Blueprint $table) {
             $table->id();
+            $table->string('titulo');
+            $table->text('descripcion')->nullable();
+            $table->boolean('completada')->default(false);
             $table->timestamps();
         });
     }
