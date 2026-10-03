@@ -61,6 +61,12 @@ Recurso `tareas` (`routes/web.php`): `index`, `create`, `store`,
 php artisan route:list --name=tareas
 ```
 
+## Capturas
+
+![Formulario de creación de tarea](assets/captura_formulario_tarea.png)
+
+![Listado con mensaje de tarea creada](assets/captura_tarea_creada.png)
+
 ## Estructura
 
 ```text
