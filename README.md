@@ -63,7 +63,13 @@ php artisan route:list --name=tareas
 
 ## Capturas
 
+**Formulario de tarea** (`captura_formulario_tarea.png`): vista de creación
+con los campos Título y Descripción y los botones Guardar y Volver.
+
 ![Formulario de creación de tarea](assets/captura_formulario_tarea.png)
+
+**Tarea creada** (`captura_tarea_creada.png`): listado tras guardar, con el
+mensaje flash de confirmación y la tabla Título/Descripción/Completada/Acciones.
 
 ![Listado con mensaje de tarea creada](assets/captura_tarea_creada.png)
 
